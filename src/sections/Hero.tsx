@@ -2,7 +2,9 @@ import memojiImage from '@/assets/images/memoji-computer.png'
 import Image from 'next/image';
 import ArrowDown from '@/assets/icons/arrow-down.svg'
 import grainImage from '@/assets/images/grain.jpg'
+import { HeroOrbit } from '@/components/HeroOrbit';
 import StarIcon from '@/assets/icons/star.svg'
+
 
 export const HeroSection = () => {
   return (
@@ -20,13 +22,16 @@ export const HeroSection = () => {
       <div className='size-[1220px] hero-ring'></div>
 
       {/* Stars */}
-      <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 '>
-        <div className='border border-red-500 size-[800px] animate-spin [animation-duration:30s]'>
-          <div className='border border-red-500 inline-flex animate-spin [animation-duration:5s]'>
-            <StarIcon className="size-28 text-emerald-300" />
-          </div>
-        </div>
-      </div>
+      <HeroOrbit size={800} rotation={-72}>
+        <StarIcon className="size-28 text-emerald-300" />
+      </HeroOrbit>
+      <HeroOrbit size={550} rotation={20}>
+        <StarIcon className="size-12 text-emerald-300" />
+      </HeroOrbit>
+      <HeroOrbit size={590} rotation={98}>
+        <StarIcon className="size-8 text-emerald-300" />
+      </HeroOrbit>
+      
 
       <div className="container">
         <div className='flex flex-col items-center'>
