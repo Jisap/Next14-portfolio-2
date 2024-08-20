@@ -3,15 +3,14 @@ import { PropsWithChildren } from 'react'
 
 
 
-// animate-spin [animation-duration:5s]
-// <StarIcon className="size-28 text-emerald-300" />
+
 export const HeroOrbit = ({ children, size, rotation }: PropsWithChildren<{ size: number; rotation: number; }>) => {
   return (
     <div className='absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 '>
       <div 
         className=''
         style={{
-          transform: `rotate(${rotation}deg)`, 
+          transform: `rotate(${rotation}deg)`, // Lo que este dentro rota alrededor de su centro
           height: `${size}px`,
           width: `${size}px`,
         }}  
@@ -19,8 +18,8 @@ export const HeroOrbit = ({ children, size, rotation }: PropsWithChildren<{ size
         <div 
           className='inline-flex'
           style={{
-            transform: `rotate(${rotation * -1}deg)`,
-          }}  
+            transform: `rotate(${rotation * -1}deg)`, // Cuando se aplica una rotación negativa = rotación + del contenedorppal se cancela el efecto de rotación
+          }}                                          // lo que resulta en una orientación final de 0 grados. Las estrellas apuntan hacia arriba.
         >
           { children }
         </div>
