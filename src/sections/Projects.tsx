@@ -62,12 +62,8 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
+              className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20"
             >
-
-              <div className="absolute inset-0 -z-10 opacity-5" style={{
-                backgroundImage: `url(${grainImage.src})`
-              }}></div>
 
               <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                 <div className="lg:pb-16">
