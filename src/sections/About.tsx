@@ -39,6 +39,37 @@ const toolboxItems =[
     title: 'Github',
     iconType: GithubIcon
   },
+];
+
+const hobbies = [
+  {
+    title: 'Painting',
+    emoji: '🎨',
+  },
+  {
+    title: 'Photography',
+    emoji: '🎞',
+  },
+  {
+    title: 'Gaming',
+    emoji: '🎮',
+  },
+  {
+    title: 'Hiking',
+    emoji: '🥾',
+  },
+  {
+    title: 'Music',
+    emoji: '🎷',
+  },
+  {
+    title: 'Fitness',
+    emoji: '👟',
+  },
+  {
+    title: 'Reading',
+    emoji: '📚',
+  },
 ]
 
 
@@ -82,6 +113,14 @@ export const AboutSection = () => {
             <StarIcon />
             <h3>Beyond the code</h3>
             <p>Explore my interest and hobbies beyond the digital realm</p>
+          </div>
+          <div>
+            {hobbies.map((hobby) => (
+              <div key={hobby.title}>
+                <span>{hobby.title}</span>
+                <span>{hobby.emoji}</span>
+              </div>
+            ))}
           </div>
         </Card>
         <Card>
