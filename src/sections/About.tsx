@@ -105,12 +105,18 @@ export const AboutSection = () => {
             />
             <ToolboxItems 
               items={toolboxItems}
+              className="mt-6"
+            />
+            <ToolboxItems
+              items={toolboxItems}
+              className="mt-6"
             />
           </Card>
-          <Card>
+          <Card className="h-[320px] p-0">
             <CardHeader
               title="Beyond the code"
               description="Explore my interest and hobbies beyond the digital realm."
+              className="px-6 pt-6"
             />
             <div>
               {hobbies.map((hobby) => (
