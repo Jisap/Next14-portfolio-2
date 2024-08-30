@@ -84,7 +84,7 @@ export const AboutSection = () => {
           title="A Glimpse Into My World"
           description="Learn more about who I am, what I do, and what inspire me"
         />
-        <div className="mt-20">
+        <div className="mt-20 flex flex-col gap-8">
           <Card className="h-[320px]">
             <CardHeader 
               title="My Reads" 
@@ -110,6 +110,7 @@ export const AboutSection = () => {
             <ToolboxItems
               items={toolboxItems}
               className="mt-6"
+              itemsWrapperClassName="-translate-x-1/2"
             />
           </Card>
           <Card className="h-[320px] p-0">
