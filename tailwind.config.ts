@@ -27,11 +27,16 @@ const config: Config = {
       }
     },
     animation: {
+      "spin": 'spin 1s linear infinite',
       "ping-large": "ping-large 1s ease-in-out infinite",
       "move-left": "move-left 1s linear infinite",
       "move-right": "move-right 1s linear infinite"
     },
     keyframes: {
+      "spin": {
+        from: { transform: 'rotate(0deg)' },
+        to: { transform: 'rotate(360deg)' },
+      },
       "ping-large": {
         "75%, 100%" : {
           transform: "scale(3)",
